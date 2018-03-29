@@ -1,0 +1,69 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my money",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "SpendingReportIntent",
+          "slots": [
+            {
+              "name": "timePeriod",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "I would like it for {timePeriod}",
+                "I want a budget report for {timePeriod}",
+                "{timePeriod}"
+              ]
+            }
+          ],
+          "samples": [
+            "tell me my spending report for {timePeriod}",
+            "am I on track with my budget for {timePeriod}"
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "SpendingReportIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "timePeriod",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.913574445042.1505725695203"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.913574445042.1505725695203",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "for what time period would you like a spending report?"
+          }
+        ]
+      }
+    ]
+  }
+}

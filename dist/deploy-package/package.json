@@ -1,0 +1,21 @@
+{
+  "name": "mymoneyskill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "aws-sdk": "^2.216.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "m": "^1.3.1",
+    "mocha": "^5.0.5"
+  },
+  "scripts": {
+    "build-deploy": "bash /Users/brian/developer/myMoneySkill/buildAndDeploy.sh",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
